@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASL Web Translator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="translator-container">
+    <div class="translator-card">
+      <div class="header">
+        <h1>Speech to ASL</h1>
+        <p class="subtitle">Real-time American Sign Language translation</p>
+      </div>
+      
+      <div class="input-section">
+        <div class="controls">
+          <button id="startRecording" class="button primary">
+            <span class="icon">🎤</span>
+            <span class="button-text">Start</span>
+            <div class="ripple"></div>
+          </button>
+          <button id="stopRecording" class="button secondary" disabled>
+            <span class="icon">⏹</span>
+            <span class="button-text">Stop</span>
+            <div class="ripple"></div>
+          </button>
+          <button id="captureVideo" class="button primary">
+            <span class="icon">🎥</span>
+            <span class="button-text">Capture Browser</span>
+            <div class="ripple"></div>
+          </button>
+          <button id="stopBrowserRecording" class="button secondary" style="display: none;">
+            <span class="icon">⏹</span>
+            <span class="button-text">Stop Browser Recording</span>
+            <div class="ripple"></div>
+          </button>
+          <button id="stopRecording" class="control-button" style="display: none;">
+            <i class="fas fa-stop"></i>
+            <span>Stop Recording</span>
+          </button>
+        </div>
+        
+        <div class="audio-level-indicator" style="display: none;">
+          <div class="level-bar">
+            <div class="level-fill"></div>
+          </div>
+          <span class="level-text">Audio Level: 0%</span>
+        </div>
+
+        <div class="transcript-box">
+          <div class="box-header">
+            <h3>Transcript</h3>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span class="status-text">Ready</span>
+            </div>
+          </div>
+          <div id="transcript" class="transcript-content">
+            Your speech will appear here...
+          </div>
+        </div>
+      </div>
+
+      <div class="output-section">
+        <div class="box-header">
+          <h3>ASL Translation</h3>
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span class="status-text">Waiting</span>
+          </div>
+        </div>
+        <div class="asl-display">
+          <div id="aslAnimation" class="asl-animation">
+            <video id="outputVideo" controls class="asl-video"></video>
+            <div class="placeholder-content">
+              <span class="placeholder-icon">👋</span>
+              <p>ASL signs will be displayed here...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 

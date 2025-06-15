@@ -1,0 +1,23 @@
+{
+  "name": "aslwebextension",
+  "version": "1.0.0",
+  "description": "A Chrome extension that converts speech to American Sign Language (ASL) in real-time using browser audio.",
+  "main": "convert_icons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMerjin/ASLWebExtension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheMerjin/ASLWebExtension/issues"
+  },
+  "homepage": "https://github.com/TheMerjin/ASLWebExtension#readme",
+  "dependencies": {
+    "sharp": "^0.34.2"
+  }
+}
